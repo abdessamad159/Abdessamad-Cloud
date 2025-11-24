@@ -1,0 +1,686 @@
+// كائن الترجمة للنصوص باللغتين العربية والإنجليزية
+const translations = {
+  ar: {
+    // العناوين الرئيسية
+    pageTitle: "AbdeSsamad Cloud - التقنية بلا حدود | حلول سحابية متكاملة",
+    logo: "AbdeSsamad Cloud",
+    
+    // القائمة الرئيسية
+    navHome: "الرئيسية",
+    navFeatures: "المميزات",
+    navStats: "الإحصائيات",
+    navPricing: "الأسعار",
+    navTestimonials: "آراء العملاء",
+    navFaq: "الأسئلة الشائعة",
+    navServices: "خدماتنا",
+    navAbout: "من نحن",
+    navBlog: "المدونة",
+    navContact: "تواصل معنا",
+    
+    // زر تبديل اللغة
+    langToggle: "EN",
+    
+    // القسم الرئيسي
+    heroTitle: "حلول سحابية تُعيد تعريف السرعة والذكاء",
+    heroDesc: "AbdeSsamad Cloud تقدم بيئة تقنية متكاملة تجمع بين الكفاءة والأمان وسهولة التوسع. اكتشف عالمًا جديدًا من الحلول السحابية المصممة خصيصًا لاحتياجاتك.",
+    heroCta1: "ابدأ رحلتك الآن",
+    heroCta2: "اكتشف المميزات",
+    
+    // قسم الإحصائيات
+    stat1: "خادم نشط",
+    stat2: "عميل راضٍ",
+    stat3: "مركز بيانات عالمي",
+    stat4: "% وقت تشغيل",
+    
+    // قسم المميزات
+    featuresTitle: "المميزات التقنية",
+    feature1Title: "أداء استثنائي",
+    feature1Desc: "سرعة معالجة عالية تضمن استجابة فورية لأي تطبيق أو خدمة. بنية تحتية متطورة توفر أداءً لا مثيل له.",
+    feature2Title: "أمان مطلق",
+    feature2Desc: "نظام أمان مدمج بتشفير متقدم يحمي بياناتك على مدار الساعة. طبقات حماية متعددة تضمن أقصى درجات الأمان.",
+    feature3Title: "تكامل سحابي كامل",
+    feature3Desc: "ربط فوري مع مختلف الأنظمة والخدمات السحابية دون تعقيد. تكامل سلس مع أدواتك المفضلة.",
+    feature4Title: "توسع مرن",
+    feature4Desc: "قم بتوسيع مواردك بسهولة مع نمو أعمالك. تكاليف مرنة تتناسب مع احتياجاتك الفعلية.",
+    feature5Title: "دعم فني متميز",
+    feature5Desc: "فريق دعم فني متخصص متاح على مدار الساعة لمساعدتك في حل أي تحديات قد تواجهك.",
+    feature6Title: "تقارير متقدمة",
+    feature6Desc: "احصل على تقارير مفصلة عن أداء خدماتك واستهلاك الموارد لاتخاذ قرارات مستنيرة.",
+    
+    // قسم الأسعار
+    pricingTitle: "خطط الأسعار",
+    pricingTag1: "الأكثر اقتصاداً",
+    pricingTag2: "الخيار الأمثل",
+    pricingTag3: "للمؤسسات الكبرى",
+    pricingPlan1: "الباقة الأساسية",
+    pricingPlan2: "الباقة الاحترافية",
+    pricingPlan3: "باقة المؤسسات",
+    pricingPeriod: "/شهر",
+    pricingFeature1: "10GB مساحة تخزين",
+    pricingFeature2: "دعم فني عبر البريد",
+    pricingFeature3: "لوحة تحكم أساسية",
+    pricingFeature4: "نسخ احتياطي أسبوعي",
+    pricingFeature5: "شهادة SSL مجانية",
+    pricingFeature6: "50GB مساحة تخزين",
+    pricingFeature7: "دعم فني مباشر 24/7",
+    pricingFeature8: "تكامل API متقدم",
+    pricingFeature9: "نسخ احتياطي يومي",
+    pricingFeature10: "مراقبة أداء متقدمة",
+    pricingFeature11: "CDN مجاني",
+    pricingFeature12: "مساحة تخزين غير محدودة",
+    pricingFeature13: "دعم فني مخصص",
+    pricingFeature14: "أمان متقدم وشبكة خاصة",
+    pricingFeature15: "إدارة سحابية مخصصة",
+    pricingFeature16: "تقارير أداء مفصلة",
+    pricingFeature17: "SLA بنسبة 99.9%",
+    pricingButton1: "ابدأ الآن",
+    pricingButton2: "اشترك الآن",
+    pricingButton3: "تواصل معنا",
+    
+    // قسم آراء العملاء
+    testimonialsTitle: "ماذا يقول عملاؤنا",
+    testimonial1: "\"لقد غيرت AbdeSsamad Cloud طريقة عملنا بالكامل. السرعة والموثوقية استثنائية، وفريق الدعم دائماً متاح للمساعدة.\"",
+    testimonial2: "\"نستخدم خدمات AbdeSsamad Cloud منذ أكثر من عام، ولم نواجه أي توقف. الأداء المتميز والتكلفة المعقولة جعلانا نوسع خدماتنا.\"",
+    testimonial3: "\"الباقة الاحترافية من AbdeSsamad Cloud وفرت لنا كل ما نحتاجه لتشغيل تطبيقاتنا. التكامل السلس مع أدواتنا الحالية كان مذهلاً.\"",
+    client1Name: "أحمد السيد",
+    client1Role: "مدير تقنية المعلومات، شركة التقنية المتطورة",
+    client2Name: "فاطمة محمد",
+    client2Role: "مؤسسة متجر إلكتروني، نماء",
+    client3Name: "خالد العلي",
+    client3Role: "مطور برمجيات، تكامل للحلول",
+    
+    // قسم الأسئلة الشائعة
+    faqTitle: "الأسئلة الشائعة",
+    faqQuestion1: "كيف يمكنني نقل موقعي الحالي إلى AbdeSsamad Cloud؟",
+    faqAnswer1: "نقدم خدمة نقل مجانية لجميع العملاء الجدد. فريقنا الفني سينقل موقعك بالكامل مع الحفاظ على جميع البيانات والإعدادات دون أي توقف يذكر للخدمة.",
+    faqQuestion2: "هل يمكنني الترقية أو خفض الباقة لاحقاً؟",
+    faqAnswer2: "نعم، يمكنك الترقية أو خفض الباقة في أي وقت. التغييرات تُطبق فوراً، ونحن نحسب الفروق بشكل تناسبي لضمان العدالة.",
+    faqQuestion3: "ما هي سياسة الاسترجاع؟",
+    faqAnswer3: "نقدم ضمان استرجاع الأموال خلال 30 يومًا من الاشتراك إذا لم تكن راضيًا عن خدماتنا. اتصل بفريق الدعم لمعرفة التفاصيل.",
+    faqQuestion4: "هل تدعمون التكامل مع خدمات الطرف الثالث؟",
+    faqAnswer4: "نعم، نقدم تكاملًا سلسًا مع مجموعة واسعة من الخدمات مثل GitHub، Docker، Jenkins، وأدوات CI/CD الأخرى عبر واجهات برمجة التطبيقات المتقدمة.",
+    
+    // قسم المدونة
+    blogTitle: "أحدث المقالات",
+    blogTitle1: "مستقبل الحوسبة السحابية في العالم العربي",
+    blogDesc1: "كيف ستغير الحلول السحابية طريقة عمل الشركات في المنطقة خلال السنوات القادمة.",
+    blogTitle2: "أفضل ممارسات الأمان في البيئة السحابية",
+    blogDesc2: "نصائح عملية لتعزيز أمن بياناتك وتطبيقاتك في السحابة.",
+    blogTitle3: "كيف تحسن أداء تطبيقاتك السحابية",
+    blogDesc3: "استراتيجيات وتقنيات مجربة لتحسين سرعة واستجابة تطبيقاتك.",
+    blogReadMore: "اقرأ المزيد",
+    
+    // قسم الدعوة للإجراء
+    ctaTitle: "جاهز لبدء رحلتك السحابية؟",
+    ctaDesc: "انضم إلى أكثر من 15,000 عميل يثقون بـ AbdeSsamad Cloud لحلولهم السحابية.",
+    ctaButton: "ابدأ الآن مجانًا لمدة 14 يومًا",
+    
+    // التذييل
+    footerDesc: "نقدم حلول سحابية متكاملة تجمع بين الكفاءة والأمان وسهولة التوسع.",
+    footerLinks1: "روابط سريعة",
+    footerLinks2: "الخدمات",
+    footerLinks3: "اتصل بنا",
+    service1: "الاستضافة السحابية",
+    service2: "التخزين السحابي",
+    service3: "قواعد البيانات",
+    service4: "شبكات CDN",
+    service5: "الأمان السحابي",
+    footerAddress: "الرياض، المملكة العربية السعودية",
+    footerCopyright: "© 2025 AbdeSsamad Cloud — التقنية بلا حدود. جميع الحقوق محفوظة.",
+
+    // صفحات جديدة
+    aboutTitle: "من نحن",
+    aboutDesc: "نحن فريق من الخبراء المتحمسين لبناء مستقبل رقمي أفضل.",
+    servicesTitle: "خدماتنا",
+    servicesDesc: "حلول تقنية متكاملة لتنمية أعمالك.",
+    contactTitle: "تواصل معنا",
+    contactDesc: "نحن هنا للإجابة على استفساراتك ومساعدتك في البدء.",
+    blogPageTitle: "المدونة",
+    blogPageDesc: "أحدث الأخبار والتقنيات في عالم الحوسبة السحابية.",
+    
+    // تفاصيل صفحة من نحن
+    ourStoryTitle: "قصتنا",
+    ourStoryText1: "تأسست AbdeSsamad Cloud برؤية واضحة: تمكين الشركات والأفراد من الاستفادة القصوى من قوة الحوسبة السحابية. نحن نؤمن بأن التقنية يجب أن تكون سهلة الوصول، آمنة، وموثوقة للجميع.",
+    ourStoryText2: "منذ انطلاقنا، عملنا بجد لبناء بنية تحتية عالمية المستوى تخدم آلاف العملاء حول العالم. نحن نفخر بفريقنا المتنوع من المهندسين والمطورين الذين يعملون ليل نهار لضمان استمرارية أعمالكم.",
+    teamTitle: "فريقنا القيادي",
+    teamRole1: "المدير التنفيذي",
+    teamRole2: "مديرة التقنية",
+    teamRole3: "مدير العمليات",
+    teamRole4: "مديرة التسويق",
+    
+    // تفاصيل صفحة الخدمات
+    serviceDesc1: "استضافة عالية الأداء مع وقت تشغيل مضمون بنسبة 99.9%. خوادمنا مجهزة بأحدث التقنيات لضمان سرعة موقعك.",
+    serviceDesc2: "مساحة تخزين آمنة وقابلة للتوسع لجميع ملفاتك وبياناتك. وصول سريع وآمن من أي مكان في العالم.",
+    serviceDesc3: "قواعد بيانات مدارة بالكامل تدعم SQL و NoSQL. نسخ احتياطي تلقائي واستعادة البيانات بنقرة زر.",
+    serviceDesc4: "شبكة توصيل محتوى عالمية لتسريع تحميل موقعك للمستخدمين في جميع أنحاء العالم.",
+    serviceDesc5: "حماية متقدمة ضد هجمات DDoS والبرمجيات الخبيثة. جدران حماية وتشفير للبيانات لضمان سلامة أعمالك.",
+    serviceTitle6: "DevOps & CI/CD",
+    serviceDesc6: "أدوات متكاملة للمطورين لتسريع عملية التطوير والنشر. تكامل مع GitHub و GitLab.",
+    
+    // تفاصيل صفحة التواصل
+    contactInfoTitle: "معلومات الاتصال",
+    contactAddressTitle: "العنوان",
+    contactEmailTitle: "البريد الإلكتروني",
+    contactPhoneTitle: "الهاتف",
+    contactHoursTitle: "ساعات العمل",
+    contactHours: "الأحد - الخميس: 9:00 ص - 6:00 م",
+    contactFormTitle: "أرسل لنا رسالة",
+    formName: "الاسم الكامل",
+    formNamePlaceholder: "أدخل اسمك",
+    formEmail: "البريد الإلكتروني",
+    formEmailPlaceholder: "أدخل بريدك الإلكتروني",
+    formSubject: "الموضوع",
+    formSubjectPlaceholder: "موضوع الرسالة",
+    formMessage: "الرسالة",
+    formMessagePlaceholder: "اكتب رسالتك هنا...",
+    formSubmit: "إرسال الرسالة"
+  },
+  en: {
+    // Main titles
+    pageTitle: "AbdeSsamad Cloud - Technology Without Limits | Integrated Cloud Solutions",
+    logo: "AbdeSsamad Cloud",
+    
+    // Main menu
+    navHome: "Home",
+    navFeatures: "Features",
+    navStats: "Statistics",
+    navPricing: "Pricing",
+    navTestimonials: "Testimonials",
+    navFaq: "FAQ",
+    navServices: "Services",
+    navAbout: "About Us",
+    navBlog: "Blog",
+    navContact: "Contact Us",
+    
+    // Language toggle button
+    langToggle: "AR",
+    
+    // Hero section
+    heroTitle: "Cloud Solutions That Redefine Speed and Intelligence",
+    heroDesc: "AbdeSsamad Cloud offers an integrated technical environment that combines efficiency, security, and ease of expansion. Discover a new world of cloud solutions designed specifically for your needs.",
+    heroCta1: "Start Your Journey Now",
+    heroCta2: "Discover Features",
+    
+    // Statistics section
+    stat1: "Active Servers",
+    stat2: "Satisfied Clients",
+    stat3: "Global Data Centers",
+    stat4: "% Uptime",
+    
+    // Features section
+    featuresTitle: "Technical Features",
+    feature1Title: "Exceptional Performance",
+    feature1Desc: "High processing speed ensures instant response for any application or service. Advanced infrastructure provides unparalleled performance.",
+    feature2Title: "Absolute Security",
+    feature2Desc: "Built-in security system with advanced encryption protects your data 24/7. Multiple protection layers ensure maximum security.",
+    feature3Title: "Full Cloud Integration",
+    feature3Desc: "Instant connection with various cloud systems and services without complexity. Seamless integration with your favorite tools.",
+    feature4Title: "Flexible Scaling",
+    feature4Desc: "Easily expand your resources as your business grows. Flexible costs that match your actual needs.",
+    feature5Title: "Premium Technical Support",
+    feature5Desc: "Specialized technical support team available 24/7 to help you solve any challenges you may face.",
+    feature6Title: "Advanced Reports",
+    feature6Desc: "Get detailed reports about your services performance and resource consumption to make informed decisions.",
+    
+    // Pricing section
+    pricingTitle: "Pricing Plans",
+    pricingTag1: "Most Economical",
+    pricingTag2: "Optimal Choice",
+    pricingTag3: "For Large Enterprises",
+    pricingPlan1: "Basic Package",
+    pricingPlan2: "Professional Package",
+    pricingPlan3: "Enterprise Package",
+    pricingPeriod: "/month",
+    pricingFeature1: "10GB Storage Space",
+    pricingFeature2: "Email Technical Support",
+    pricingFeature3: "Basic Control Panel",
+    pricingFeature4: "Weekly Backup",
+    pricingFeature5: "Free SSL Certificate",
+    pricingFeature6: "50GB Storage Space",
+    pricingFeature7: "24/7 Direct Technical Support",
+    pricingFeature8: "Advanced API Integration",
+    pricingFeature9: "Daily Backup",
+    pricingFeature10: "Advanced Performance Monitoring",
+    pricingFeature11: "Free CDN",
+    pricingFeature12: "Unlimited Storage Space",
+    pricingFeature13: "Dedicated Technical Support",
+    pricingFeature14: "Advanced Security & Private Network",
+    pricingFeature15: "Custom Cloud Management",
+    pricingFeature16: "Detailed Performance Reports",
+    pricingFeature17: "99.9% SLA",
+    pricingButton1: "Start Now",
+    pricingButton2: "Subscribe Now",
+    pricingButton3: "Contact Us",
+    
+    // Testimonials section
+    testimonialsTitle: "What Our Clients Say",
+    testimonial1: "\"AbdeSsamad Cloud completely changed how we work. The speed and reliability are exceptional, and the support team is always available to help.\"",
+    testimonial2: "\"We've been using AbdeSsamad Cloud services for over a year, and we haven't experienced any downtime. The excellent performance and reasonable cost made us expand our services.\"",
+    testimonial3: "\"The Professional package from AbdeSsamad Cloud provided us with everything we need to run our applications. The seamless integration with our existing tools was amazing.\"",
+    client1Name: "Ahmed Al-Sayed",
+    client1Role: "IT Manager, Advanced Technology Company",
+    client2Name: "Fatima Mohammed",
+    client2Role: "E-commerce Store Founder, Namaa",
+    client3Name: "Khalid Al-Ali",
+    client3Role: "Software Developer, Integration Solutions",
+    
+    // FAQ section
+    faqTitle: "Frequently Asked Questions",
+    faqQuestion1: "How can I transfer my current site to AbdeSsamad Cloud?",
+    faqAnswer1: "We offer free transfer service for all new clients. Our technical team will transfer your entire site while maintaining all data and settings with minimal service interruption.",
+    faqQuestion2: "Can I upgrade or downgrade my package later?",
+    faqAnswer2: "Yes, you can upgrade or downgrade your package at any time. Changes are applied immediately, and we calculate differences proportionally to ensure fairness.",
+    faqQuestion3: "What is the refund policy?",
+    faqAnswer3: "We offer a 30-day money-back guarantee from subscription if you're not satisfied with our services. Contact the support team for details.",
+    faqQuestion4: "Do you support integration with third-party services?",
+    faqAnswer4: "Yes, we offer seamless integration with a wide range of services like GitHub, Docker, Jenkins, and other CI/CD tools through advanced APIs.",
+    
+    // Blog section
+    blogTitle: "Latest Articles",
+    blogTitle1: "The Future of Cloud Computing in the Arab World",
+    blogDesc1: "How cloud solutions will change the way companies work in the region in the coming years.",
+    blogTitle2: "Best Security Practices in Cloud Environment",
+    blogDesc2: "Practical tips to enhance the security of your data and applications in the cloud.",
+    blogTitle3: "How to Improve Your Cloud Applications Performance",
+    blogDesc3: "Proven strategies and techniques to improve the speed and responsiveness of your applications.",
+    blogReadMore: "Read More",
+    
+    // CTA section
+    ctaTitle: "Ready to Start Your Cloud Journey?",
+    ctaDesc: "Join over 15,000 clients who trust AbdeSsamad Cloud for their cloud solutions.",
+    ctaButton: "Start Now Free for 14 Days",
+    
+    // Footer
+    footerDesc: "We provide integrated cloud solutions that combine efficiency, security, and ease of expansion.",
+    footerLinks1: "Quick Links",
+    footerLinks2: "Services",
+    footerLinks3: "Contact Us",
+    service1: "Cloud Hosting",
+    service2: "Cloud Storage",
+    service3: "Databases",
+    service4: "CDN Networks",
+    service5: "Cloud Security",
+    footerAddress: "Riyadh, Kingdom of Saudi Arabia",
+    footerCopyright: "© 2025 AbdeSsamad Cloud — Technology Without Limits. All rights reserved.",
+
+    // New Pages
+    aboutTitle: "About Us",
+    aboutDesc: "We are a team of experts passionate about building a better digital future.",
+    servicesTitle: "Our Services",
+    servicesDesc: "Integrated technical solutions to grow your business.",
+    contactTitle: "Contact Us",
+    contactDesc: "We are here to answer your inquiries and help you get started.",
+    blogPageTitle: "Blog",
+    blogPageDesc: "Latest news and technologies in the cloud computing world.",
+    
+    // About Page Details
+    ourStoryTitle: "Our Story",
+    ourStoryText1: "AbdeSsamad Cloud was founded with a clear vision: to empower businesses and individuals to make the most of cloud computing power. We believe technology should be accessible, secure, and reliable for everyone.",
+    ourStoryText2: "Since our inception, we have worked hard to build world-class infrastructure serving thousands of clients worldwide. We are proud of our diverse team of engineers and developers working day and night to ensure your business continuity.",
+    teamTitle: "Our Leadership Team",
+    teamRole1: "CEO",
+    teamRole2: "CTO",
+    teamRole3: "COO",
+    teamRole4: "CMO",
+    
+    // Services Page Details
+    serviceDesc1: "High-performance hosting with 99.9% guaranteed uptime. Our servers are equipped with the latest technologies to ensure your site speed.",
+    serviceDesc2: "Secure and scalable storage space for all your files and data. Fast and secure access from anywhere in the world.",
+    serviceDesc3: "Fully managed databases supporting SQL and NoSQL. Automatic backup and data restoration with a click.",
+    serviceDesc4: "Global Content Delivery Network to accelerate your site loading for users worldwide.",
+    serviceDesc5: "Advanced protection against DDoS attacks and malware. Firewalls and data encryption to ensure your business safety.",
+    serviceTitle6: "DevOps & CI/CD",
+    serviceDesc6: "Integrated tools for developers to accelerate development and deployment. Integration with GitHub and GitLab.",
+    
+    // Contact Page Details
+    contactInfoTitle: "Contact Information",
+    contactAddressTitle: "Address",
+    contactEmailTitle: "Email",
+    contactPhoneTitle: "Phone",
+    contactHoursTitle: "Working Hours",
+    contactHours: "Sunday - Thursday: 9:00 AM - 6:00 PM",
+    contactFormTitle: "Send Us a Message",
+    formName: "Full Name",
+    formNamePlaceholder: "Enter your name",
+    formEmail: "Email",
+    formEmailPlaceholder: "Enter your email",
+    formSubject: "Subject",
+    formSubjectPlaceholder: "Message subject",
+    formMessage: "Message",
+    formMessagePlaceholder: "Write your message here...",
+    formSubmit: "Send Message"
+  }
+};
+
+// تهيئة جميع الوظائف بعد تحميل الصفحة
+document.addEventListener('DOMContentLoaded', function() {
+  // العناصر الرئيسية في الصفحة
+  const colorPickerBtn = document.getElementById('colorPickerBtn');
+  const darkModeBtn = document.getElementById('darkModeBtn');
+  const langToggle = document.getElementById('langToggle');
+  const colorPalette = document.getElementById('colorPalette');
+  const colorOptions = document.querySelectorAll('.color-option');
+  const backToTopBtn = document.getElementById('backToTop');
+  const faqItems = document.querySelectorAll('.faq-item');
+  const floatingSettingsBtn = document.getElementById('floatingSettingsBtn');
+  
+  // تحديد اللغة الافتراضية
+  let currentLang = localStorage.getItem('language') || 'ar';
+  
+  // تحميل اللغة عند فتح الصفحة
+  loadLanguage(currentLang);
+  
+  // فتح/إغلاق قائمة الألوان
+  if (colorPickerBtn) {
+    colorPickerBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      colorPalette.classList.toggle('hidden');
+    });
+  }
+  
+  // زر الإعدادات العائم
+  if (floatingSettingsBtn) {
+    floatingSettingsBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (colorPalette) {
+        colorPalette.classList.toggle('hidden');
+        // تحديد موقع القائمة بالقرب من الزر العائم
+        if (!colorPalette.classList.contains('hidden')) {
+            const rect = floatingSettingsBtn.getBoundingClientRect();
+            colorPalette.style.top = 'auto';
+            colorPalette.style.bottom = (window.innerHeight - rect.top + 10) + 'px';
+            colorPalette.style.left = rect.left + 'px';
+            colorPalette.style.right = 'auto';
+        }
+      }
+    });
+  }
+  
+  // تغيير اللون الأساسي للصفحة
+  colorOptions.forEach(option => {
+    option.addEventListener('click', function() {
+      const color = this.getAttribute('data-color');
+      changeThemeColor(color);
+      
+      // إزالة الفعالية من جميع الخيارات وإضافتها للخيار المحدد
+      colorOptions.forEach(opt => opt.classList.remove('active'));
+      this.classList.add('active');
+      
+      // إخفاء قائمة الألوان بعد الاختيار
+      colorPalette.classList.add('hidden');
+    });
+  });
+  
+  // تبديل الوضع الليلي/النهاري
+  if (darkModeBtn) {
+    darkModeBtn.addEventListener('click', function() {
+      document.body.classList.toggle('dark-mode');
+      
+      // تغيير الأيقونة حسب الوضع
+      const icon = this.querySelector('i');
+      if (document.body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        darkModeBtn.setAttribute('title', currentLang === 'ar' ? 'الوضع النهاري' : 'Light Mode');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+        darkModeBtn.setAttribute('title', currentLang === 'ar' ? 'الوضع الليلي' : 'Dark Mode');
+      }
+      
+      // حفظ التفضيل في localStorage
+      localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+    });
+  }
+  
+  // تبديل اللغة
+  if (langToggle) {
+    langToggle.addEventListener('click', function() {
+      currentLang = currentLang === 'ar' ? 'en' : 'ar';
+      loadLanguage(currentLang);
+      localStorage.setItem('language', currentLang);
+    });
+  }
+  
+  // دالة تغيير لون السمة الرئيسية للصفحة
+  function changeThemeColor(color) {
+    let primaryColor, darkColor, heroStart, heroEnd;
+    
+    // تحديد الألوان بناءً على الاختيار
+    switch(color) {
+      case 'green':
+        primaryColor = '#28a745';
+        darkColor = '#1e7e34';
+        heroStart = '#28a745';
+        heroEnd = '#1e7e34';
+        break;
+      case 'purple':
+        primaryColor = '#6f42c1';
+        darkColor = '#59359a';
+        heroStart = '#6f42c1';
+        heroEnd = '#59359a';
+        break;
+      case 'orange':
+        primaryColor = '#fd7e14';
+        darkColor = '#e36209';
+        heroStart = '#fd7e14';
+        heroEnd = '#e36209';
+        break;
+      case 'red':
+        primaryColor = '#dc3545';
+        darkColor = '#c82333';
+        heroStart = '#dc3545';
+        heroEnd = '#c82333';
+        break;
+      default: // blue - اللون الافتراضي
+        primaryColor = '#0078d4';
+        darkColor = '#005a9e';
+        heroStart = '#0078d4';
+        heroEnd = '#005a9e';
+    }
+    
+    // تطبيق الألوان الجديدة على متغيرات CSS
+    document.documentElement.style.setProperty('--primary', primaryColor);
+    document.documentElement.style.setProperty('--primary-dark', darkColor);
+    document.documentElement.style.setProperty('--hero-bg-start', heroStart);
+    document.documentElement.style.setProperty('--hero-bg-end', heroEnd);
+    
+    // حفظ التفضيل في localStorage
+    localStorage.setItem('themeColor', color);
+  }
+  
+  // دالة تحميل التفضيلات المحفوظة من localStorage
+  function loadPreferences() {
+    // تحميل الوضع الليلي
+    if (localStorage.getItem('darkMode') === 'true') {
+      document.body.classList.add('dark-mode');
+      const icon = darkModeBtn ? darkModeBtn.querySelector('i') : null;
+      if (icon) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        darkModeBtn.setAttribute('title', currentLang === 'ar' ? 'الوضع النهاري' : 'Light Mode');
+      }
+    }
+    
+    // تحميل لون السمة
+    const savedColor = localStorage.getItem('themeColor') || 'blue';
+    changeThemeColor(savedColor);
+    
+    // وضع علامة على اللون النشط
+    colorOptions.forEach(option => {
+      if (option.getAttribute('data-color') === savedColor) {
+        option.classList.add('active');
+      }
+    });
+  }
+  
+  // دالة تحميل اللغة
+  function loadLanguage(lang) {
+    // تغيير سمة dir وlang في العنصر html
+    document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+    document.documentElement.setAttribute('lang', lang);
+    
+    // تحديث جميع النصوص في الصفحة
+    const elements = document.querySelectorAll('[data-key]');
+    elements.forEach(element => {
+      const key = element.getAttribute('data-key');
+      if (translations[lang][key]) {
+        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+          if (element.hasAttribute('placeholder')) {
+            element.setAttribute('placeholder', translations[lang][key]);
+          } else {
+             element.value = translations[lang][key];
+          }
+        } else if (element.hasAttribute('placeholder')) {
+          element.setAttribute('placeholder', translations[lang][key]);
+        } else {
+          element.textContent = translations[lang][key];
+        }
+      }
+    });
+    
+    // تحديث عنوان الصفحة
+    if(translations[lang].pageTitle) {
+        document.title = translations[lang].pageTitle;
+    }
+    
+    // تحديث عنوان زر الوضع الليلي
+    if (darkModeBtn) {
+      darkModeBtn.setAttribute('title', lang === 'ar' ? 
+        (document.body.classList.contains('dark-mode') ? 'الوضع النهاري' : 'الوضع الليلي') : 
+        (document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode'));
+    }
+  }
+  
+  // استدعاء تحميل التفضيلات عند فتح الصفحة
+  loadPreferences();
+  
+  // إغلاق قائمة الألوان عند النقر خارجها
+  document.addEventListener('click', function(event) {
+    if (colorPalette && !colorPalette.contains(event.target) && event.target !== colorPickerBtn && event.target !== floatingSettingsBtn) {
+      colorPalette.classList.add('hidden');
+    }
+  });
+
+  // إضافة تأثير سلس للتنقل بين الأقسام (فقط إذا كان الرابط يبدأ بـ #)
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if(targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if(targetElement) {
+        e.preventDefault();
+        // حساب الإزاحة بناءً على حجم الشاشة
+        const offset = window.innerWidth >= 769 ? 80 : 20;
+        window.scrollTo({
+          top: targetElement.offsetTop - offset,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // إضافة تأثير parallax خفيف للشعار في القسم الرئيسي
+  window.addEventListener('scroll', function() {
+    const scrolled = window.pageYOffset;
+    const rate = scrolled * -0.5;
+    
+    // تأثير parallax خفيف للشعار
+    const heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+      heroContent.style.transform = `translateY(${rate * 0.4}px)`;
+    }
+    
+    // إظهار/إخفاء زر العودة للأعلى
+    if (backToTopBtn) {
+        if (scrolled > 300) {
+        backToTopBtn.classList.add('visible');
+        } else {
+        backToTopBtn.classList.remove('visible');
+        }
+    }
+  });
+  
+  // العودة إلى الأعلى عند النقر على الزر
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+  
+  // تفعيل/إلغاء تفعيل الأسئلة الشائعة
+  if (faqItems.length > 0) {
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        if(question) {
+            question.addEventListener('click', () => {
+            // إغلاق جميع الأسئلة الأخرى
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                otherItem.classList.remove('active');
+                }
+            });
+            
+            // فتح/إغلاق السؤال المحدد
+            item.classList.toggle('active');
+            });
+        }
+      });
+  }
+  
+  // تأثير الظهور التدريجي للعناصر عند التمرير
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.1 });
+
+  // تطبيق تأثير الظهور على جميع العناصر ذات كلاس fade-in
+  document.querySelectorAll(".fade-in").forEach((el) => {
+    observer.observe(el);
+  });
+
+  // عداد الإحصائيات
+  const counters = document.querySelectorAll('.counter');
+  const speed = 200;
+  
+  const startCounters = () => {
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        
+        const inc = target / speed;
+        
+        if (count < target) {
+          counter.innerText = Math.ceil(count + inc);
+          setTimeout(updateCount, 1);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      
+      updateCount();
+    });
+  };
+  
+  // بدء العد عند ظهور قسم الإحصائيات
+  const statsSection = document.getElementById('stats');
+  if (statsSection) {
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            startCounters();
+            statsObserver.unobserve(entry.target);
+        }
+        });
+    }, { threshold: 0.5 });
+    statsObserver.observe(statsSection);
+  }
+});
