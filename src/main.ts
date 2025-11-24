@@ -476,12 +476,34 @@ document.addEventListener('DOMContentLoaded', () => {
   function changeThemeColor(colorName: string) {
     const color = colors.find(c => c.name === colorName) || colors[0];
     
+    // Update primary colors
     document.documentElement.style.setProperty('--primary', color.hex);
     document.documentElement.style.setProperty('--primary-dark', color.dark);
+    
+    // Update hero gradient colors for light mode
     document.documentElement.style.setProperty('--hero-bg-start', color.hex);
     document.documentElement.style.setProperty('--hero-bg-end', color.dark);
     
+    // Also update dark mode hero colors by calculating darker versions
+    const darkerStart = adjustColorBrightness(color.hex, -30);
+    const darkerEnd = adjustColorBrightness(color.dark, -10);
+    document.documentElement.style.setProperty('--hero-bg-start-dark', darkerStart);
+    document.documentElement.style.setProperty('--hero-bg-end-dark', darkerEnd);
+    
     localStorage.setItem('themeColor', colorName);
+  }
+  
+  // Helper function to adjust color brightness
+  function adjustColorBrightness(hex: string, percent: number): string {
+    const num = parseInt(hex.replace('#', ''), 16);
+    const amt = Math.round(2.55 * percent);
+    const R = (num >> 16) + amt;
+    const G = (num >> 8 & 0x00FF) + amt;
+    const B = (num & 0x0000FF) + amt;
+    return '#' + (0x1000000 + (R < 255 ? R < 1 ? 0 : R : 255) * 0x10000 +
+      (G < 255 ? G < 1 ? 0 : G : 255) * 0x100 +
+      (B < 255 ? B < 1 ? 0 : B : 255))
+      .toString(16).slice(1);
   }
   
   function loadPreferences() {

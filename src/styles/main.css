@@ -15,6 +15,8 @@
   --transition: all 0.3s ease;
   --hero-bg-start: #0078d4;
   --hero-bg-end: #005a9e;
+  --hero-bg-start-dark: #004578;
+  --hero-bg-end-dark: #005a9e;
 }
 
 /* Dark Mode Variables */
@@ -25,8 +27,13 @@
   --light-bg: #323130;
   --text-color: #f3f2f1;
   --gray: #a19f9d;
-  --hero-bg-start: #004578;
-  --hero-bg-end: #005a9e;
+}
+
+/* Dark mode uses dynamic hero colors */
+.dark-mode .hero,
+.dark-mode .page-header,
+.dark-mode .cta {
+  background: linear-gradient(135deg, var(--hero-bg-start-dark), var(--hero-bg-end-dark)) !important;
 }
 
 /* Base Styles */
@@ -61,7 +68,7 @@ ul {
 
 /* Header */
 .header {
-  background: var(--white); /* Restored to white */
+  background: var(--white);
   color: var(--text-color);
   padding: 1rem 0;
   position: fixed;
@@ -70,12 +77,37 @@ ul {
   z-index: 1000;
   transition: var(--transition);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, rgba(0, 120, 212, 0.03) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(0, 120, 212, 0.03) 0%, transparent 50%);
+  animation: fogMove 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .dark-mode .header {
-  background: #201f1e; /* Dark mode background */
+  background: #201f1e;
   color: var(--text-color);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .header::before {
+  background: radial-gradient(circle at 20% 50%, rgba(43, 136, 216, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(43, 136, 216, 0.05) 0%, transparent 50%);
+}
+
+.header .container {
+  position: relative;
+  z-index: 1;
 }
 
 .header.scrolled {
@@ -811,6 +843,26 @@ footer {
   transition: var(--transition);
   position: relative;
   z-index: 10;
+  overflow: hidden;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  animation: fogMove 25s ease-in-out infinite reverse;
+  pointer-events: none;
+  z-index: 0;
+}
+
+footer .container {
+  position: relative;
+  z-index: 1;
 }
 
 .footer-content {
@@ -1074,6 +1126,18 @@ body.dark-mode .circles-bg li {
   }
 }
 
+/* Fog Animation */
+@keyframes fogMove {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(50px, 30px) scale(1.1);
+    opacity: 0.8;
+  }
+}
+
 /* Animations */
 @keyframes fadeInUp {
   from {
@@ -1126,15 +1190,37 @@ body.dark-mode .circles-bg li {
 /* New Pages Specific Styles */
 .page-header {
   background: linear-gradient(135deg, var(--hero-bg-start), var(--hero-bg-end));
-  color: var(--white);
+  color: white;
   padding: 8rem 0 4rem;
   text-align: center;
   margin-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated Background for page-header */
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIvPjwvc3ZnPg==') repeat;
+  opacity: 0.3;
+  animation: slide 20s linear infinite;
+  z-index: 0;
+}
+
+.page-header .container {
+  position: relative;
+  z-index: 2;
 }
 
 .page-header h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  animation: fadeInUp 1s ease-out;
 }
 
 .page-header p {
@@ -1142,6 +1228,17 @@ body.dark-mode .circles-bg li {
   opacity: 0.9;
   max-width: 600px;
   margin: 0 auto;
+  animation: fadeInUp 1s ease-out 0.2s backwards;
+}
+
+/* Canvas animation for page headers */
+.hero-animation-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 /* Services Page */
