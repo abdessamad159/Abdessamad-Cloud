@@ -21,8 +21,8 @@
 
 /* Dark Mode Variables */
 .dark-mode {
-  --primary: #2b88d8;
-  --primary-dark: #0078d4;
+  --primary: var(--primary-dm, #2b88d8); /* Fallback to default blue */
+  --primary-dark: var(--primary-dark-dm, #0078d4);
   --white: #201f1e;
   --light-bg: #323130;
   --text-color: #f3f2f1;

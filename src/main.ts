@@ -484,6 +484,15 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.style.setProperty('--hero-bg-start', color.hex);
     document.documentElement.style.setProperty('--hero-bg-end', color.dark);
     
+    // Calculate dark mode colors
+    // For dark mode, we might want a slightly lighter/brighter primary color to stand out against dark bg
+    // or we can use the same color. Let's use the same color for consistency but ensure it's set.
+    // Actually, let's make it slightly lighter for better visibility on dark backgrounds if needed.
+    // For now, let's map them directly to ensure the switch works.
+    
+    document.documentElement.style.setProperty('--primary-dm', color.hex); 
+    document.documentElement.style.setProperty('--primary-dark-dm', color.dark);
+
     // Also update dark mode hero colors by calculating darker versions
     const darkerStart = adjustColorBrightness(color.hex, -30);
     const darkerEnd = adjustColorBrightness(color.dark, -10);
