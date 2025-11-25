@@ -333,7 +333,9 @@ body[dir="ltr"] .color-palette {
 
 /* Hero Section */
 .hero {
-  height: 100vh;
+  min-height: 100vh;
+  padding-top: 80px; /* Account for fixed header */
+  padding-bottom: 4rem; /* Ensure space at bottom */
   background: linear-gradient(135deg, var(--hero-bg-start), var(--hero-bg-end));
   color: white;
   display: flex;
